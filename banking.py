@@ -26,6 +26,7 @@ class Account():
         if amount < 0:
             amount = abs(amount)
         transaction = Transaction(amount)
+        #transaction = Transaction(amount,datetime)具体应该怎么写
         self.transactions.append(transaction)
 
     def withdraw(self,amount):
@@ -35,6 +36,7 @@ class Account():
         if amount > 0:
             amount = -amount
         transaction = Transaction(amount)
+        #transaction = Transaction(amount,datetime)具体应该怎么写
         self.transactions.append(transaction)
 
 
