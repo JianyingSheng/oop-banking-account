@@ -10,7 +10,9 @@ def test_transaction_binds_amount_to_self():
     """
     test confirms the amount parameter is bound to self.
     """
-    #这个不知道怎么写
+    transaction =Transaction(10)
+    assert transaction.amount == 10
+
 def test_transaction_object_defaults_its_datetime_to_now():
     """
     The default timestamp should be now
@@ -22,6 +24,9 @@ def test_transaction_binds_timestamp_argument():
     """
     Test confirms the time parameter is bound to object
     """
+    transaction = Transaction(100,datetime(2002, 1, 10))
+    assert transaction.timestamp == datetime(2002, 1, 10)
+
 def test_repr():
     """
     Test tests the result of __repr__ method
